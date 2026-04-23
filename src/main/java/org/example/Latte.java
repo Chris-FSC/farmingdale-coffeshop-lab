@@ -4,7 +4,7 @@ public class Latte implements Beverage {
     private String name;
     private String description;
     private double cost;
-    private String Milk;
+    private String milk;
     private String size;
     private String sweetener;
     private int shots;
@@ -38,7 +38,7 @@ public class Latte implements Beverage {
     }
     @Override
     public int getShots() {
-        return espressoShots;
+        return shots;
     }
     @Override
     public boolean isHot() {
