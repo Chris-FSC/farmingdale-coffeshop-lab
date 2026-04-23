@@ -4,6 +4,12 @@ public class Coffee implements Beverage {
     private String name;
     private String description;
     private double cost;
+    private String size;
+    private String milk;
+    private String sweetener;
+    private int espressoShots;
+    private boolean isHot;
+
 
     public Coffee(String name, String description, double cost) {
         this.name = name;
@@ -21,5 +27,25 @@ public class Coffee implements Beverage {
     @Override
     public double getCost() {
         return cost;
+    }
+    @Override
+    public String getSize() {
+        return size;
+    }
+    @Override
+    public String getMilk() {
+        return milk;
+    }
+    @Override
+    public int getShots() {
+        return espressoShots;
+    }
+    @Override
+    public boolean isHot() {
+        return isHot;
+    }
+    @Override
+    public String getSweetener() {
+        return sweetener;
     }
 }

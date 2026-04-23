@@ -28,12 +28,20 @@ public class Cappuccino implements Beverage {
         return cost;
     }
     @Override
+    public String getSize() {
+        return size;
+    }
+    @Override
     public String getMilk() {
         return milk;
     }
     @Override
-    public String getSize() {
-        return size;
+    public int getShots() {
+        return espressoShots;
+    }
+    @Override
+    public boolean isHot() {
+        return isHot;
     }
     @Override
     public String getSweetener() {
