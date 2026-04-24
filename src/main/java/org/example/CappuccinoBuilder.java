@@ -1,8 +1,8 @@
 package org.example;
 
-public class CoffeeBuilder extends BeverageBuilder {
-    public CoffeeBuilder() {
-        beverage = new Coffee();
+public class CappuccinoBuilder extends BeverageBuilder {
+    public CappuccinoBuilder() {
+        beverage = new Cappuccino();
     }
     public BeverageBuilder setSize(String size) {
         beverage.size = size;
