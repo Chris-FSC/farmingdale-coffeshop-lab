@@ -5,9 +5,9 @@ public class Coffee extends AbstractBeverage {
 
 
     public Coffee() {
-        this.name = name;
-        this.description = description;
-        this.cost = cost;
+        this.name = "Coffee";
+        this.description = "";
+        this.cost = 4.50;
     }
     public void setSize(String size) {
         this.size = size;

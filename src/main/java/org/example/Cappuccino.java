@@ -4,9 +4,9 @@ public class Cappuccino extends AbstractBeverage {
 
 
     public Cappuccino() {
-        this.name = name;
-        this.description = description;
-        this.cost = cost;
+        this.name = "Cappuccino";
+        this.description = "";
+        this.cost = 6.25;
     }
     public void setSize(String size) {
         this.size = size;

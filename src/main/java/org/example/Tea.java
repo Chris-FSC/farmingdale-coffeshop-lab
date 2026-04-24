@@ -4,9 +4,9 @@ public class Tea extends AbstractBeverage {
 
 
     public Tea() {
-        this.name = name;
-        this.description = description;
-        this.cost = cost;
+        this.name = "Tea";
+        this.description = "";
+        this.cost = 3.00;
     }
     public void setSize(String size) {
         this.size = size;

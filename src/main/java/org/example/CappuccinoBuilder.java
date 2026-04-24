@@ -6,27 +6,27 @@ public class CappuccinoBuilder extends BeverageBuilder {
     }
     @Override
     public BeverageBuilder setSize(String size) {
-        beverage.size = size;
+        ((AbstractBeverage) beverage).setSize(size);
         return this;
     }
     @Override
     public BeverageBuilder setMilk(String milk) {
-        beverage.milk = milk;
+        ((AbstractBeverage) beverage).setMilk(milk);
         return this;
     }
     @Override
     public BeverageBuilder setSweetener(String sweetener) {
-        beverage.sweetener = sweetener;
+        ((AbstractBeverage) beverage).setSweetener(sweetener);
         return this;
     }
     @Override
     public BeverageBuilder setShots(int shots) {
-        beverage.shots = shots;
+        ((AbstractBeverage) beverage).setShots(shots);
         return this;
     }
     @Override
-    public BeverageBuilder setTemp(boolean isHot) {
-        beverage.isHot = isHot;
+    public BeverageBuilder setHot(boolean isHot) {
+        ((AbstractBeverage) beverage).setHot(isHot);
         return this;
     }
 }
