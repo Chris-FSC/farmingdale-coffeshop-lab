@@ -1,50 +1,13 @@
 package org.example;
 
-public class Cappuccino implements Beverage {
-    private String name;
-    private String description;
-    private double cost;
-    private String milk;
-    private String size;
-    private int shots;
-    private String sweetener;
+public class Cappuccino extends AbstractBeverage {
 
-    public Cappuccino(String name, String description, double cost) {
+
+    public Cappuccino() {
         this.name = name;
         this.description = description;
         this.cost = cost;
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-    @Override
-    public String getDescription() {
-        return description;
-    }
-    @Override
-    public double getCost() {
-        return cost;
-    }
-    @Override
-    public String getSize() {
-        return size;
-    }
-    @Override
-    public String getMilk() {
-        return milk;
-    }
-    @Override
-    public int getShots() {
-        return shots;
-    }
-    @Override
-    public boolean isHot() {
-        return true;
-    }
-    @Override
-    public String getSweetener() {
-        return sweetener;
-    }
+
 }

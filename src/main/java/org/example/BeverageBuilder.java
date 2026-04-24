@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class BeverageBuilder {
+public abstract class BeverageBuilder implements Beverage {
     Beverage beverage;
     public abstract BeverageBuilder setSize(String size);
     public abstract BeverageBuilder setMilk(String milk);
