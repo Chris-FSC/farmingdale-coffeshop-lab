@@ -3,7 +3,6 @@ package org.example;
 public class Tea implements Beverage {
     private String name;
     private String description;
-    private double cost;
     private String milk;
     private String size;
     private String sweetener;
@@ -12,7 +11,6 @@ public class Tea implements Beverage {
     public Tea(String name, String description, double cost) {
         this.name = name;
         this.description = description;
-        this.cost = cost;
     }
 
     @Override
