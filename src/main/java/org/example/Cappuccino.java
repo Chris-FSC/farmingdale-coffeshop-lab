@@ -2,17 +2,16 @@ package org.example;
 
 public class Cappuccino implements Beverage {
     private String name = "Cappuccino";
-    private String description;
-    private double cost;
     private String milk;
     private String size;
     private int shots;
     private String sweetener;
 
-    public Cappuccino(String name, String description, double cost) {
-        this.name = name;
-        this.description = description;
-        this.cost = cost;
+    public Cappuccino(Size size, Milk milk, Sweetener sweetener, int shots) {
+        this.size = size.toString();
+        this.milk = milk.toString();
+        this.sweetener = sweetener.toString();
+        this.shots = shots;
     }
 
     @Override
@@ -21,7 +20,7 @@ public class Cappuccino implements Beverage {
     }
     @Override
     public String getDescription() {
-        return description;
+        return String.format("%s Cappuccino with %s milk, %d shots, and %s sweetener", size, milk, shots, sweetener);
     }
     @Override
     public String getSize() {
