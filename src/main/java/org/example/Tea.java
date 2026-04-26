@@ -2,17 +2,15 @@ package org.example;
 
 public class Tea implements Beverage {
     private String name = "Tea";
-    private String milk;
+    private String milk = "None";
     private String size;
     private String sweetener;
     private boolean isHot;
 
-    public Tea(Size size, Milk milk, Sweetener sweetener, boolean isHot) {
+    public Tea(Size size, Sweetener sweetener, boolean isHot) {
         this.size = size.toString();
-        this.milk = milk.toString();
         this.sweetener = sweetener.toString();
         this.isHot = isHot;
-
     }
 
     @Override

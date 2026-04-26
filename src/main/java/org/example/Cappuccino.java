@@ -4,7 +4,7 @@ public class Cappuccino implements Beverage {
     private String name = "Cappuccino";
     private String milk;
     private String size;
-    private int shots;
+    private int shots = 1;
     private String sweetener;
 
     public Cappuccino(Size size, Milk milk, Sweetener sweetener, int shots) {

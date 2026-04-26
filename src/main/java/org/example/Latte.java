@@ -5,7 +5,7 @@ public class Latte implements Beverage {
     private String milk;
     private String size;
     private String sweetener;
-    private int shots;
+    private int shots = 1;
     private boolean isHot;
 
     public Latte(Size size, Milk milk, Sweetener sweetener, int shots, boolean isHot) {
