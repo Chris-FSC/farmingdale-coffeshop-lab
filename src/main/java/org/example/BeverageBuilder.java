@@ -5,11 +5,11 @@ public class BeverageBuilder {
     private String type;
     private Size size;
     private Milk milk = Milk.WHOLE;
-    private Sweetener sweetener;
+    private Sweetener sweetener = Sweetener.NONE;
     private int shots = 1;
     private boolean isHot = true;
 
-    public BeverageBuilder(String type, Size size, Sweetener Sweetener) {
+    public BeverageBuilder(String type, Size size) {
         String typeToLower = type.toLowerCase();
 
         if (!(typeToLower.equals("coffee") || typeToLower.equals("tea")) || typeToLower.equals("cappuccino") || typeToLower.equals("latte")) {
@@ -18,29 +18,35 @@ public class BeverageBuilder {
 
         this.type = type;
         this.size = size;
-        this.sweetener = sweetener;
     }
 
-    public void updateMilk(Milk milk) {
+    public BeverageBuilder updateMilk(Milk milk) {
         if (type.equalsIgnoreCase("tea")) {
             throw new IllegalArgumentException("Milk is not allowed for tea");
         }
         this.milk = milk;
+        return this;
     }
-    public void updateShots(int shots) {
+
+    public BeverageBuilder updateShots(int shots) {
         if (type.equalsIgnoreCase("tea")) {
             throw new IllegalArgumentException("Shots are not allowed for tea");
         }
         this.shots = shots;
+        return this;
     }
-    public void updateIsHot(boolean isHot) {
+
+    public BeverageBuilder updateIsHot(boolean isHot) {
         if (type.equalsIgnoreCase("cappuccino")) {
             throw new IllegalArgumentException("Cappuccino is always hot");
         }
         this.isHot = isHot;
+        return this;
     }
-    public void updateSweetener(Sweetener sweetener) {
+
+    public BeverageBuilder updateSweetener(Sweetener sweetener) {
         this.sweetener = sweetener;
+        return this;
     }
 
     public Beverage build() {

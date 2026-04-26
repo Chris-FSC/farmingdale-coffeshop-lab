@@ -4,7 +4,7 @@ public class Tea implements Beverage {
     private String name = "Tea";
     private String milk = "None";
     private String size;
-    private String sweetener;
+    private String sweetener = "None";
     private boolean isHot;
 
     public Tea(Size size, Sweetener sweetener, boolean isHot) {
