@@ -10,14 +10,16 @@ public class BeverageBuilder {
     private boolean isHot = true;
 
     public BeverageBuilder(String type, Size size) {
-        String typeToLower = type.toLowerCase();
+        this.type = type.toLowerCase();
+        this.size = size;
 
-        if (!(typeToLower.equals("coffee") || typeToLower.equals("tea")) || typeToLower.equals("cappuccino") || typeToLower.equals("latte")) {
+        if (!(this.type.equals("coffee") || this.type.equals("tea") || this.type.equals("cappuccino")
+                || this.type.equals("latte"))) {
             throw new IllegalArgumentException("Invalid beverage type: " + type);
         }
 
-        this.type = type;
-        this.size = size;
+
+
     }
 
     public BeverageBuilder updateMilk(Milk milk) {
