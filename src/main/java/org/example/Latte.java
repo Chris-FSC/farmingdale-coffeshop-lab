@@ -1,19 +1,19 @@
 package org.example;
 
 public class Latte implements Beverage {
-    private String name;
-    private String description;
-    private double cost;
+    private String name = "Latte";
     private String milk;
     private String size;
     private String sweetener;
-    private int shots;
+    private int shots = 1;
     private boolean isHot;
 
-    public Latte(String name, String description, double cost) {
-        this.name = name;
-        this.description = description;
-        this.cost = cost;
+    public Latte(Size size, Milk milk, Sweetener sweetener, int shots, boolean isHot) {
+        this.size = size.toString();
+        this.milk = milk.toString();
+        this.sweetener = sweetener.toString();
+        this.shots = shots;
+        this.isHot = isHot;
     }
 
     @Override
@@ -22,11 +22,7 @@ public class Latte implements Beverage {
     }
     @Override
     public String getDescription() {
-        return description;
-    }
-    @Override
-    public double getCost() {
-        return cost;
+        return String.format("%s latte with %s milk, %d shots and %s sweetener", size, milk, shots, sweetener);
     }
     @Override
     public String getSize() {
