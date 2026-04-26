@@ -1,7 +1,7 @@
 package org.example;
 
 public class Cappuccino implements Beverage {
-    private String name;
+    private String name = "Cappuccino";
     private String description;
     private double cost;
     private String milk;
@@ -22,10 +22,6 @@ public class Cappuccino implements Beverage {
     @Override
     public String getDescription() {
         return description;
-    }
-    @Override
-    public double getCost() {
-        return cost;
     }
     @Override
     public String getSize() {

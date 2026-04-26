@@ -24,10 +24,6 @@ public class Tea implements Beverage {
         return description;
     }
     @Override
-    public double getCost() {
-        return cost;
-    }
-    @Override
     public String getSize() {
         return size;
     }
