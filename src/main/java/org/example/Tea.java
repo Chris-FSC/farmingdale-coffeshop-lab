@@ -1,16 +1,18 @@
 package org.example;
 
 public class Tea implements Beverage {
-    private String name;
-    private String description;
+    private String name = "Tea";
     private String milk;
     private String size;
     private String sweetener;
     private boolean isHot;
 
-    public Tea(String name, String description, double cost) {
-        this.name = name;
-        this.description = description;
+    public Tea(Size size, Milk milk, Sweetener sweetener, boolean isHot) {
+        this.size = size.toString();
+        this.milk = milk.toString();
+        this.sweetener = sweetener.toString();
+        this.isHot = isHot;
+
     }
 
     @Override
@@ -19,7 +21,7 @@ public class Tea implements Beverage {
     }
     @Override
     public String getDescription() {
-        return description;
+        return String.format("%s tea with %s milk and %s sweetener", size, milk, sweetener);
     }
     @Override
     public String getSize() {
