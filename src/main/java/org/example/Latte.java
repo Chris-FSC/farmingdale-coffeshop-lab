@@ -22,7 +22,8 @@ public class Latte implements Beverage {
     }
     @Override
     public String getDescription() {
-        return String.format("%s latte with %s milk, %d shots and %s sweetener", size, milk, shots, sweetener);
+        String temp = isHot ? "Hot" : "Iced";
+        return String.format("%s %s latte with %s milk, %d shots and %s sweetener", temp, size, milk, shots, sweetener);
     }
     @Override
     public String getSize() {

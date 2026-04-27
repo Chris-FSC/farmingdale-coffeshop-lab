@@ -12,12 +12,15 @@ public class BeverageBuilder {
     public BeverageBuilder(String type, Size size) {
         String typeToLower = type.toLowerCase();
 
-        if (!(typeToLower.equals("coffee") || typeToLower.equals("tea")) || typeToLower.equals("cappuccino") || typeToLower.equals("latte")) {
+
+        if (!(typeToLower.equals("coffee") || typeToLower.equals("tea") || typeToLower.equals("cappuccino")
+                || typeToLower.equals("latte"))) {
             throw new IllegalArgumentException("Invalid beverage type: " + type);
         }
 
         this.type = type;
         this.size = size;
+
     }
 
     public BeverageBuilder updateMilk(Milk milk) {
@@ -31,6 +34,9 @@ public class BeverageBuilder {
     public BeverageBuilder updateShots(int shots) {
         if (type.equalsIgnoreCase("tea")) {
             throw new IllegalArgumentException("Shots are not allowed for tea");
+        }
+        if (shots < 0 || shots > 3) {
+            throw new IllegalArgumentException("Shots must be between 0 and 3");
         }
         this.shots = shots;
         return this;

@@ -19,7 +19,8 @@ public class Coffee implements Beverage {
     }
     @Override
     public String getDescription() {
-        return String.format("%s coffee with %s milk and %s sweetener", size, milk, sweetener);
+        String temp = isHot ? "Hot" : "Iced";
+        return String.format("%s %s coffee with %s milk and %s sweetener", temp, size, milk, sweetener);
     }
     @Override
     public String getSize() {

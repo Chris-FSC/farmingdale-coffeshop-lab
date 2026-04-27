@@ -15,7 +15,7 @@ enum Size {
 }
 
 enum Milk {
-    WHOLE, SKIM, ALMOND, MILK, SOY
+    WHOLE, SKIM, ALMOND, OAT, SOY, NO
 }
 
 enum Sweetener {

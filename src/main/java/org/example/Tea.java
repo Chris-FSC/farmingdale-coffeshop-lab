@@ -2,9 +2,9 @@ package org.example;
 
 public class Tea implements Beverage {
     private String name = "Tea";
-    private String milk = "None";
+    private String milk = "No";
     private String size;
-    private String sweetener = "None";
+    private String sweetener = "No";
     private boolean isHot;
 
     public Tea(Size size, Sweetener sweetener, boolean isHot) {
@@ -19,7 +19,8 @@ public class Tea implements Beverage {
     }
     @Override
     public String getDescription() {
-        return String.format("%s tea with %s milk and %s sweetener", size, milk, sweetener);
+        String temp = isHot ? "Hot" : "Iced";
+        return String.format("%s %s tea with %s milk and %s sweetener", temp, size, milk, sweetener);
     }
     @Override
     public String getSize() {
